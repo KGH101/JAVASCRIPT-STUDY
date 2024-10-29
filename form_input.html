@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="" id="my form">
+        <label for="">first_character</label><br>
+        <input type="text" id="num1" name="num1" required><br> 
+        <label for="">second_character</label><br>
+        <input type="text" name="" id="num2" required><br> 
+        <button type="calculate">submit</button>
+    </form>
+
+    <div  id="solution">
+    </div>
+        
+
+    <script>
+        // get the form to js abd store it in a variable
+        let form=  document.getElementById("my form");
+
+        // add an event
+        
+        form.addEventListener("submit", function(e){
+
+            // prents page from refreshing
+            e.preventDefault();
+
+            // check if the user has inputed data
+            // get form data
+
+            let first_character= document.getElementById("num1").value
+            let second_character= document.getElementById("num2").value
+            
+            let third_character= first_character + " " +second_character
+
+            document.getElementById("solution").innerHTML=third_character
+
+        })
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+   // Create a variable and console log whether a number is odd or even
+
+   //let number=prompt("Enter Number")
+
+   //if (number%2==0){
+    //console.log("Is even");
+   //}
+
+   //else{
+    //console.log("Is odd")
+   //}
+    
+   
+
+   // Create 3 variables and console log the largest of them. Assume that the user would not enter any two numbers which are the same.
+
+   //let num1= prompt("Enter num1");
+   //let num2= prompt("Enter num2");
+   //let num3= prompt("Enter num3");
+
+   //if (num1>num2 && num1>num3){
+    //console.log("num1 is the largest");
+   //}
+
+   //else if(num2>num1 && num2>num3){
+    //console.log("num2 is the largest");
+   //}
+
+   //else{
+    //console.log("num3 is the largest")
+   
+   //}
+   
+
+
+   // Create a variable called year and enter the a random year. Check if the year is a leap year or not. A leap year is a year that is divisible by 4 or by 400, except for years that are divisible by 100
+
+   // A leap year is divisible by 4.
+   // If the year is divisible by 100, it must also be divisible by 400 to be a leap year.
+
+   let year=2000;
+   if (year%4==0 && year%100==0 || year%400==0){
+    console.log("Is a leap year");
+   }
+
+   else{
+    console.log("is not a leap year")
+    }
+
+
+ //Create a variable called marks that stores a value from a prompt given. Test that is is between 0 and 100.
+
+// If the number is above 100 or below 0 give an error
+// Alert the grade of the student using the conditions below
+//>= 70 - A
+//<70 and >=60 - B
+//<60 and >=50 - C
+//<50 and >=40 - D
+//< 40 - ETASKS: Conditional St
+
+let marks=Number(prompt("enter marks"))
+let grade=""
+
+if (marks>=0 && marks<100){
+    if (marks>=70){
+        grade="A"
+    }
+    else if (marks>=60 &&marks<=70){
+        grade="B"
+    }
+    else if (marks>=50 && marks<60){
+        grade="C"
+    }
+    else if(marks>=40 && marks<50){
+        grade="D"
+    }else{
+        grade="E"
+
+    }
+}else{
+    alert("mark should be between 0 and 100")
+}
+
+console.log(grade)
+
+
+    </script>
+    
+</body>
+</html>

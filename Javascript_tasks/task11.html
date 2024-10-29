@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// Write a program that takes the date of birth of a person and the program outputs the age in terms of years,months,days TODAY.
+
+// Get today's date
+let today = new Date();
+
+// Prompt the user for their date of birth in "day/month/year" format
+let dob = prompt("Enter your date of birth (day/month/year): ");
+
+// Split the input into day, month, and year
+let t_dob = dob.split("/");
+
+// Validate the input to ensure it's in the correct format
+if (t_dob.length > 3 || Number(t_dob[0]) > 31 || Number(t_dob[1]) > 12) {
+    console.log("Wrong Date Format");
+} else {
+    // Extract year, month, and day from the input
+    let year = Number(t_dob[2]);
+    let month = Number(t_dob[1]);
+    let day = Number(t_dob[0]);
+
+    // Calculate the difference in years, months, and days
+    let ageYears = today.getFullYear() - year;
+    let ageMonths = today.getMonth() + 1 - month; // +1 because getMonth() returns 0-based month
+    let ageDays = today.getDate() - day;
+
+    // Adjust for negative days
+    if (ageDays < 0) {
+        ageMonths -= 1;
+        ageDays += 31; // Assume 31 days for adjustment, though you could calculate based on actual months
+    }
+
+    // Adjust for negative months
+    if (ageMonths < 0) {
+        ageYears -= 1;
+        ageMonths += 12;
+    }
+
+    // Output the result
+    console.log(`You are ${ageYears} years, ${ageMonths} months, and ${ageDays} days old.`);
+}
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

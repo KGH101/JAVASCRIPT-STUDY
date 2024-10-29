@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+  // 1) Clean up the following variable to give the clean version in lower case. Using inbuilt methods in the str class
+  //name = “ JOHn .“ to “john”
+
+   // let text =" JOHn ."
+    //text=text.trim("javascrpt","html")
+    //console.log(text.trim())
+
+    let text = " JOHn .";
+    let trimmed_text = text.trim(); 
+   
+    //remove period
+
+    let no_period=trimmed_text.replace(".","");
+
+    // conver to lowercase
+
+    let final=no_period.toLowerCase();
+    console.log(final)
+
+    // 2) Slice the below string to get you the resulting sentence:
+    //sentence_one = “The Dog Breed is German Shepherd” only display “Breed is German”
+    //sentence_two = “Defeats for the Clinton forces, this was her moment of triumph” only display “Clinton
+    //forces”
+
+
+    // Sentence one: "The Dog Breed is German Shepherd"
+    let sentence_one = "The Dog Breed is German Shepherd";
+    let sliced_sentence_one = sentence_one.slice(8, 23);
+    console.log(sliced_sentence_one); 
+
+
+
+
+    // Sentence two: "Defeats for the Clinton forces, this was her moment of triumph"
+    let sentence_two = "Defeats for the Clinton forces, this was her moment of triumph";
+    let sliced_sentence_two = sentence_two.slice(16, 30);
+    console.log(sliced_sentence_two);  
+
+
+
+
+    // 3) Split the below sentence using a semicolon i.e ; And display length of the result.
+    //“The lazy dog; ran so fast; it hit the wall.”
+
+    let text2= "The lazy dog; ran so fast; it hit the wall.";
+    let splittext2= text2.split(";");
+    console.log(splittext2)
+
+    // 4) first_name=" Joh.n" last_name=" Do,e" Clean up and display Full name i.e John Doe
+
+    // remove space
+    let first_name=" Joh.n";
+    let trimmed_first_name=first_name.trimStart();
+
+    //remove period
+
+    let no_dot=trimmed_first_name.replace(".","");
+
+    // remove second name
+    
+    let second_name=" Do,e";
+    let trimmed_second_name=second_name.trimStart();
+
+    // remove comma second name
+
+    let no_comma=trimmed_second_name.replace(",","");
+
+    // full name
+
+    let full_name=no_dot+ " " +no_comma;
+    console.log(full_name)
+
+    // 5) Having the string r = '["E","W","C"]' #Manipulate it to display EWC
+
+    let r= '["E","W","C"]';
+    let manipulate_r= r.replace(("[","")(",","")("]",""))
+    cosole.log(manipulate_r)
+
+
+
+    
+   
+
+
+
+
+
+
+
+    </script>
+
+
+    
+</body>
+</html>
+

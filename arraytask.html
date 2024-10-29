@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+
+  //1. Assignment 1: Create an Array  named colors with the following elements: 'red', 'green', 'blue'.
+
+  //let colors= ["red","green","blue"]
+
+  //2: Access and Modify Array Elements Given the array colors, access the second element and change it to 'pink'. Then, print the
+  //modified array.
+
+  let colors= ["red","green","blue"]
+  colors[1]="pink"
+  console.log(colors)
+  
+
+  //3: Determine the Length of an Array, Given the array colors, determine its length and store it in a variable lengthOfColors. Then,
+  //print lengthOfColors.
+
+  
+  let lengthOfColors=colors.length;
+  console.log(lengthOfColors)
+
+
+  //4. Assignment 4: Use .pop() Method, Given the array colors, use the .pop() method to remove the last element from the array.
+  //Then, print the modified array. 
+
+  colors.pop()
+  console.log(colors)
+
+
+ // Assignment 1: Combine Arrays, Given two arrays arr1 and arr2, combine them into a single array combinedArray using the
+//.concat() method. Then, remove the first element from combinedArray using the .shift()
+//method. Finally, print the modified combinedArray.
+
+    let arr1=["Rolls Royce","Subaru","Nissan","Mazda","Maybach"]
+    let arr2=["Banana","Watermelon","Lime","Passion","Orange"]
+
+    let combinedArray=arr1.concat(arr2)
+    combinedArray.shift()
+    console.log(combinedArray)
+
+
+// Assignment 2: Extract Subarray Given an array “sourceArray”, extract a subarray “extractedArray” from index 2 to index 4
+// using the .slice() method. Then, modify the extractedArray by replacing its elements with 'x',
+// 'y', and 'z' using the .splice() method. Finally, print both the sourceArray and the modified
+//extractedArray.
+
+let sourceArray=["Mombasa","Kilifi","Nairobi","Lamu","Machakos","Thika","Nakuru"]
+let extractedArray=sourceArray.slice(2,5)
+extractedArray.splice(0,3,"x","y","z")
+console.log(extractedArray)
+
+
+    </script>
+    
+</body>
+</html>

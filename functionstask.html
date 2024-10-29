@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+
+// Write a program which gets a phone number from a form input or terminal. Validates the phone number by checking if it starts with +254.. or 07.. or 7… or 254.. or 01... or  1.. Convert the number to start with +254… 
+// e.g if a user enters “0712345678”, the program should display “+254712345678”
+// e.g if a user enters “0112345678”, the program should display “+254112345678”
+// e.g if a user enters “712345678”, the program should display “+254712345678”
+
+function validate_num(phone_num){
+
+    let valid = ""; // Variable to hold the result
+
+// Check if phone number starts with +254 and has 13 digits
+if (phone_num [0,4]=== "+254" && phone_num.length === 13) {   
+    valid = `is valid`;
+}
+// Check if phone number starts with 07 and has 10 digits
+else if (phone_num [0,2] === "07" && phone_num.length === 10) {
+    valid = `is valid`;
+}
+// Check if phone number starts with 7 and has 9 digits
+else if (phone_num [0,1] === "7" && phone_num.length === 9) {
+    phoneNumber = "+254" + phoneNumber;
+    valid = ` is valid`;
+}
+// Check if phone number starts with 01 and has 10 digits
+else if (phone_num [0,2] === "01" && phoneNumber.length === 10) {
+    phone_num = "+254" + phone_num[1];
+    valid = ` is valid`;
+}
+// Check if phone number starts with 1 and has 9 digits
+else if (phone_num [0,1] === "1" && phone_num.length === 9) {
+    phone_num = "+2541" + phone_num [1,1];
+    valid = `is valid`;
+}
+// If none of the conditions match, the number is invalid
+else {
+    valid = "Invalid number";
+}
+return valid
+
+}
+
+phone_number = Number("Enter Phone number: ")
+let validate= validate_num(phone_number)
+console.log(validate)
+
+
+
+
+// Write a program that lets the user input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
+
+
+// function check_pass(correct_password,maxAttempts){
+    
+
+        
+// for (let attempts = 0; attempts < maxAttempts; attempts++) {
+   
+//     // Check if the entered password matches the correct password
+//     if (enteredPassword === correct_password) {
+//         result="Access granted!";
+//         break; // Exit the loop if the password is correct
+//     } else {
+//         // Inform the user how many attempts are left
+//         let attemptsLeft = maxAttempts - (attempts + 1);
+//         if (attemptsLeft > 0) {
+//             result="Incorrect password. You have " + attemptsLeft + " attempts left.";
+
+//         } else {
+//             // Block the account if no attempts are left
+//             result="Your account is blocked.";
+//         }
+//     }
+//     return result
+// }
+
+   
+
+// }
+
+// let enteredPassword = prompt("Enter your password:");
+// let logins=  check_pass(enteredPassword)
+// console.log(logins)
+
+function check_pass(){
+    let correct_password= "admin@123"
+    let attempts = 0
+
+    for (let attempts = 0; attempts < maxAttempts; attempts++) {
+    // Prompt the user to enter the password
+    let enteredPassword = prompt("Enter your password:");
+    // Check if the entered password matches the correct password
+    if (enteredPassword === correct_password) {
+        alert("Access granted!");
+        break; // Exit the loop if the password is correct
+    } else {
+        // Inform the user how many attempts are left
+        let attemptsLeft = maxAttempts - (attempts + 1);
+        if (attemptsLeft > 0) {
+            alert("Incorrect password. You have " + attemptsLeft + " attempts left.");
+
+        } else {
+            // Block the account if no attempts are left
+            alert("Your account is blocked.");
+        }
+    }
+}
+
+
+}
+
+
+let solution= check_pass(enteredPassword)
+console.log(solution)
+
+
+    
+
+
+   
+   
+
+// Write that prompts the user to input student marks. The input should be between 0 and 100.Then output the correct grade: 
+// A > 79 , B - 60 to 79, C -  59 to 49, D - 40 to 49, E - less 40
+
+
+function grading(d){
+    let result="";
+
+    if (d>=0 && d<=100){
+    let grade;
+
+    if (d > 79) {
+        result="A"
+    } else if (d >= 60) {
+        result="B"
+    } else if (d >= 50) {
+        result="C"
+    } else if (d >= 40) {
+        result="D"
+    }
+    else{
+        result="E"
+    }
+    
+}
+
+else{
+    result="Invalid Number, marks should be between 0 and 100"
+}
+return result
+
+}
+
+input=prompt("Enter Marks")
+let grade= grading(input)
+console.log(grade)
+
+
+// Write a program called stars. It should prompt the user for a number, and it should print the number of stars till the number entered.
+// Example If rows is 5, it should print the following:
+// *
+// **
+// ***
+// ****
+// *****...
+
+
+function stars(rows){
+    let stars = "*"
+    for (i = 0; i <= rows; i++) {
+        console.log(stars.repeat(i));
+    }
+}
+let user_input=Number(prompt("Enter Number"))
+stars(user_input)
+
+
+
+
+
+
+
+
+   
+   
+
+
+    </script>
+
+    </body>
+</html>

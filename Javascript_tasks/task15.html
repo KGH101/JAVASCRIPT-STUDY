@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// Write a program that takes input of someone's basic salary and benefits, adds them to find the gross salary then uses  the gross salary to find the NHIF. 
+// To find the Kenya NHIF Rate using THIS LINK:  
+
+function calculateNHIF(grossSalary) {
+    let nhifContribution;
+    
+    if (grossSalary <= 5999) {
+        nhifContribution = 150;
+    } else if (grossSalary <= 7999) {
+        nhifContribution = 300;
+    } else if (grossSalary <= 11999) {
+        nhifContribution = 400;
+    } else if (grossSalary <= 14999) {
+        nhifContribution = 500;
+    } else if (grossSalary <= 19999) {
+        nhifContribution = 600;
+    } else if (grossSalary <= 24999) {
+        nhifContribution = 750;
+    } else if (grossSalary <= 29999) {
+        nhifContribution = 850;
+    } else if (grossSalary <= 34999) {
+        nhifContribution = 900;
+    } else if (grossSalary <= 39999) {
+        nhifContribution = 950;
+    } else if (grossSalary <= 44999) {
+        nhifContribution = 1000;
+    } else if (grossSalary <= 49999) {
+        nhifContribution = 1100;
+    } else if (grossSalary <= 59999) {
+        nhifContribution = 1200;
+    } else if (grossSalary <= 69999) {
+        nhifContribution = 1300;
+    } else if (grossSalary <= 79999) {
+        nhifContribution = 1400;
+    } else if (grossSalary <= 89999) {
+        nhifContribution = 1500;
+    } else if (grossSalary <= 99999) {
+        nhifContribution = 1600;
+    } else {
+        nhifContribution = 1700;
+    }
+    
+    return nhifContribution;
+}
+
+console.log("Gross Salary: " + grossSalary);
+
+// Continue with the program above, then use  the gross salary to find the NSSF. 
+// To find the Kenya NSSF Rate  using 6% of the Gross Salary. BUT ONLY A MINIMUM OF 18,000 Gross Salary CAN BE USED IN NSSF. 
+
+// Function to calculate NSSF contribution (6% of gross salary with a cap of 18,000)
+function calculateNSSF(grossSalary) {
+    // Maximum salary considered for NSSF is 18,000
+    let nssfSalary = grossSalary > 18000 ? 18000 : grossSalary;
+    return nssfSalary * 0.06;  // NSSF is 6% of the salary
+}
+
+
+console.log("Gross Salary: " + grossSalary);
+console.log("NHIF Contribution: " + calculateNHIF(grossSalary));
+console.log("NSSF Contribution: " + calculateNSSF(grossSalary));
+
+
+// Continue with the same program and calculate an individual’s NHDF using:
+//  i.e NHDF = gross_salary *  0.015
+
+
+function calculateNHDF(grossSalary) {
+    return grossSalary * 0.015;  // NHDF is 1.5% of the gross salary
+}
+
+console.log("NHDF Contribution: " + calculateNHDF(grossSalary));
+
+
+// Calculate the taxable income.
+// i.e taxable_income = gross salary - (NSSF + NHDF + NHIF) 
+
+function calculateTaxableIncome(grossSalary, nssf, nhif, nhdf) {
+    return grossSalary - (nssf + nhif + nhdf);
+}
+
+let taxableIncome = calculateTaxableIncome(grossSalary, nssf, nhif, nhdf);
+console.log("Taxable Income: " + taxableIncome);
+
+
+
+    </script>
+    
+</body>
+</html>

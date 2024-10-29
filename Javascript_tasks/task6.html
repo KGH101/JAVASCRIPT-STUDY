@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // Write a program that lets the user input a password. Give them only 4 attempts to check the passwords entered against “admin@123”. If the password is correct access is granted. After you show them a message , the account is blocked.
+
+    // let attempts = 0;
+    // let maxAttempts = 4;
+    // let correctPassword = "admin@123";
+
+    // while  (attempts<maxAttempts){
+    //     let pass_input= prompt("Input password")
+    //     if (pass_input===correctPassword){
+    //         alert("Access granted")
+    //         break
+    //     }else{
+    //         attempts++
+    //         alert("Incorrect password, Remaining attempts:" +(max_attempts-attempts))
+
+    //         if (attermpts===maxAttempts){
+    //             alert("Account Blocked")
+    //         }
+
+    //     }
+    // }
+
+
+    // for loop
+
+
+    
+//    let correct_password="admin@123"
+//    let attempts=0
+    
+//    for (i=0; i<4; i++){
+//         let user_input=prompt("Enter Password")
+//         if (user_input===correct_password){
+//             alert("Acces Granted")
+//             break
+//         }
+//         else{
+//             attempts++
+//             let remaining =4-attempts
+//             alert("Incorrect Password Remaining attempts: "+remaining)
+//             if (remaing===0){
+//                 alert("Account Blocked")
+//             }
+//         }
+
+//    }
+
+
+
+let correct_password="admin@123"
+let attempts=0
+let maxAttempts=4
+    
+for (let attempts = 0; attempts < maxAttempts; attempts++) {
+    // Prompt the user to enter the password
+    let enteredPassword = prompt("Enter your password:");
+
+    // Check if the entered password matches the correct password
+    if (enteredPassword === correct_password) {
+        alert("Access granted!");
+        break; // Exit the loop if the password is correct
+    } else {
+        // Inform the user how many attempts are left
+        let attemptsLeft = maxAttempts - (attempts + 1);
+        if (attemptsLeft > 0) {
+            alert("Incorrect password. You have " + attemptsLeft + " attempts left.");
+
+        } else {
+            // Block the account if no attempts are left
+            alert("Your account is blocked.");
+        }
+    }
+}
+
+   
+
+
+
+    </script>
+    
+</body>
+</html>

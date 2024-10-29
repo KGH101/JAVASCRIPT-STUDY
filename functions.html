@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+    // function that calculates area of a triangle
+    function triangle_area(){
+        base=30
+        height=20
+        area=0.5*base*height
+        console.log(area)
+    }
+
+    triangle_area()
+
+
+    function rectangle_area(length,width){
+        let area=length*width
+        return area
+    }
+
+    let rectangle1=rectangle_area(30,5)
+    console.log(rectangle1)
+    let rectangle2=rectangle_area(50,15)
+    console.log(rectangle2)
+    let rectangle3=rectangle_area(20,6)
+    console.log(rectangle3)
+    let rectangle4=rectangle_area(11,7)
+    console.log(rectangle4)
+    
+
+    // create a function that checks if a number is an even number or odd number
+
+    function even_or_odd(a){
+
+        let result = "";
+        if (a%2==0){
+            result ="Is Even"
+        }else{
+            result= "Is Odd"
+        }
+        return result
+    }
+
+ let input= Number(prompt("Enter Number"))
+ let answer= even_or_odd(input)
+ console.log(answer)
+
+
+ // Implement a program that takes 3 users  inputs from the terminal or the Browser, and stores them in three variables. Return the largest of the three. Do this without using the the inbuilt max () function!
+
+   function largest_num(a,b,c){
+
+    let result="";
+
+    if (a>b && a>c){
+        result= "a is the largest"
+    }
+
+    else if (b>a && b>c){
+        result= "b is the largest"
+        
+
+    }
+
+    else{
+       result= "c is the largest"
+    }
+    return result
+
+   }
+
+   let user_input1= Number(prompt("Enter First Number"))
+   let user_input2= Number(prompt("Enter Second Number"))
+   let user_input3= Number(prompt("Enter Third Number"))
+   let solution= largest_num(user_input1,user_input2,user_input3)
+   console.log(solution)
+
+
+   3,6,7,9
+
+
+
+
+    </script>
+    
+</body>
+</html>

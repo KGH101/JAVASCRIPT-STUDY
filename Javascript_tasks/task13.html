@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+// Write a program that takes the email and password as input from a user and checks if they are equal to “admin@mail.com” and password is “Admin@123” , if so then print  “Login is Successful” and if not print “Invalid username or password”. ONLY accept 3 tries after which it notifies you that you have been blocked.
+
+let correct_email= "admin@mail.com"
+let correct_password= "Admin@123"
+let attempts=0
+let max_attempts=3
+
+for (let attempts=0; attempts<max_attempts; attempts++){
+    let input_email= prompt("Enter Email")
+    let input_password= prompt("Enter Password")
+
+    if (input_email===correct_email && input_password===correct_password){
+        alert("Login is Successful")
+        break
+    }
+        
+    else{
+        let attemptsLeft= max_attempts - (attempts+1)
+        if (attemptsLeft > 0){
+            alert("Incorrect Username or Password, you have" +attemptsLeft+"attempts left." )
+            
+        }else{
+            alert("ACCOUNT BLOCKED")
+        }
+
+    }
+
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>

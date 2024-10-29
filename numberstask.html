@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1 Console log a boolean that checks if a number is between 0 and 100
+
+        let number_one = 20; 
+        let number_between = number_one >= 0 && number_one <= 100;
+        console.log(number_between)
+
+
+        //2 Console log a boolean that gives you true only when an email is a valid email. Do not use
+        //regular expressions.
+
+
+        let email= "hgtyu@iu.e"
+        console.log(email.includes("@") && email.includes(".")) 
+
+        //Console log a boolean that gives you true only when a phone number is a valid Kenyan phone
+        //number. If someone enters either +254712345678, 254712345678, 0712345678 , 712345678,
+        //0112345678, 112345678 it should be valid also
+
+        let phone_number="enter phone number"
+        console.log(phone_number.startsWith("+254") || phone_number.startsWith("254") || phone_number.startsWith("07") || phone_number.startsWith("7") || phone_number.startsWith("1") || phone_number.startsWith("01"))
+
+       
+       
+
+        
+    </script>
+    
+</body>
+</html>
